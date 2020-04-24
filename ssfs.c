@@ -370,8 +370,6 @@ static int xmp_rename(const char *from, const char *to)
 	int res;
 
   char ffrom[1000];
-  char fto[1000];
-
   if (strcmp(from, "/") == 0)
   {
     from = dir_path;
@@ -388,6 +386,7 @@ static int xmp_rename(const char *from, const char *to)
     sprintf(ffrom, "%s%s", dir_path, temp);
   }
 
+  char fto[1000];
   if (strcmp(to, "/") == 0)
   {
     to = dir_path;
