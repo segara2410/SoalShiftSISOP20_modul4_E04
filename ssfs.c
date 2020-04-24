@@ -42,7 +42,10 @@ void encryptV1(char *src)
       break;
 
     if(src[i] == '.')
+    {
       len = i - 1;
+      break;
+    }
   }
 
   for (int i = 1; i < len; i++)
@@ -83,7 +86,10 @@ void decryptV1(char *src)
 
   for (int i = strlen(src); i >= 0; i--) 
     if (src[i] == '.') 
+    {
       len = i - 1;
+      break;
+    }
 
   for (int i = start; i <= len; i++) 
   {
