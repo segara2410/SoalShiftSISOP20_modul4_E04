@@ -1,4 +1,4 @@
-# SoalShiftSISOP20_modul3_E04
+# SoalShiftSISOP20_modul4_E04
 
 Soal Shift Sistem Operasi 2020\
 Modul 4\
