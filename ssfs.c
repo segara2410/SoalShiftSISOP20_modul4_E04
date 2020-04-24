@@ -77,19 +77,21 @@ void decryptV1(char *src)
     
   for (int i = 1; i < len; i++)
   {
-    if(src[i] == '/' || src[i + 1] == '\0') 
+    if(src[i] == '/') 
     {
       start = i + 1;
       break;
     }
   }
 
-  for (int i = strlen(src); i >= 0; i--) 
+  for (int i = strlen(src); i >= 0; i--)
+  {
     if (src[i] == '.') 
     {
       len = i - 1;
       break;
     }
+  }
 
   for (int i = start; i <= len; i++) 
   {
@@ -106,7 +108,7 @@ void decryptV1(char *src)
       }
       caesar_index--;
     }
-}
+  }
 }
 
 static int xmp_getattr(const char *path, struct stat *stbuf)
