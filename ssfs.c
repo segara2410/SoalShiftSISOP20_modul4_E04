@@ -77,7 +77,7 @@ void decryptV1(char *src)
     
   for (int i = 1; i < len; i++)
   {
-    if(src[i] == '/') 
+    if(src[i] == '/' || src[i + 1] == '\0') 
     {
       start = i + 1;
       break;
